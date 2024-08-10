@@ -11,7 +11,7 @@ const Header = () => {
 
     const handleScroll = () => {
         const scrollPosition = window.scrollY;
-        const threshold = 50; // Adjust this value as needed
+        const threshold = 50;
 
         setIsScrolled(scrollPosition > threshold);
     };

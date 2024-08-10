@@ -17,12 +17,12 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* Adjust to your design needs */
+    max-width: 1200px; 
     margin: 0 auto;
 }
 
 .logo {
-    height: 40px; /* Adjusted for better responsiveness */
+    height: 40px;
 }
 
 .navbar {
@@ -40,14 +40,14 @@
 .start-project-btn {
     background: black;
     color: white;
-    padding: 8px 16px; /* Adjusted for responsiveness */
+    padding: 8px 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
-/* Background colors for scrolling */
+
 .home-background {
     background: hsla(0, 0%, 100%, 0.1);
     backdrop-filter: blur(5px);
@@ -77,7 +77,7 @@
 @media screen and (max-width: 768px) {
     .navbar {
         position: absolute;
-        top: 60px; /* Adjusted for mobile view */
+        top: 60px;
         left: 0;
         right: 0;
         flex-direction: column;
@@ -124,7 +124,7 @@
     }
 }
 
-/* Desktop View */
+/* Desktop View for hide menu icon*/
 @media screen and (min-width: 769px) {
     .menu-icon {
         display: none;
