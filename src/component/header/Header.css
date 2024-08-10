@@ -1,0 +1,132 @@
+/* Header Styles */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    padding: 10px 20px;
+    color: #fff;
+    transition: background 0.3s ease, color 0.3s ease;
+    display: flex;
+    justify-content: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Adjust to your design needs */
+    margin: 0 auto;
+}
+
+.logo {
+    height: 40px; /* Adjusted for better responsiveness */
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.start-project-btn {
+    background: black;
+    color: white;
+    padding: 8px 16px; /* Adjusted for responsiveness */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Background colors for scrolling */
+.home-background {
+    background: hsla(0, 0%, 100%, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.scrolled-background {
+    background: white;
+    color: black;
+}
+
+.scrolled-background .navbar a {
+    color: black;
+}
+
+.scrolled-background .start-project-btn {
+    background: black;
+    color: white;
+}
+
+.scrolled-background .menu-icon {
+    color: black;
+}
+
+
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        top: 60px; /* Adjusted for mobile view */
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.8);
+        display: none;
+        width: 100vw;
+        padding: 10px;
+    }
+
+    .navbar.open {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 24px;
+        background: transparent;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+    .header-content {
+        margin-right: 40px;
+        display: flex;
+        /* flex-direction: column; */
+        /* align-items: flex-start; */
+    }
+
+    .logo {
+        height: 30px;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    .scrolled-background .navbar a {
+        color: white;
+    }
+
+    .start-project-btn {
+        margin-top: 10px;
+    }
+}
+
+/* Desktop View */
+@media screen and (min-width: 769px) {
+    .menu-icon {
+        display: none;
+    }
+}
