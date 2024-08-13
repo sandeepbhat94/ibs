@@ -1,99 +1,163 @@
 .home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
-    animation: waveAnimation 10s infinite linear;
-    background: linear-gradient(45deg, rgb(155, 52, 248), rgb(48, 167, 231), rgb(45, 61, 184));
-    background-size: 200% 200%;
-    will-change: background-position;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+  will-change: background-position;
+  overflow: hidden;
 }
 
+
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 .title {
-    font-size: calc(1.5rem + 2vw);
-    margin-top: 10vh;
-    color: white;
+  font-size: calc(1.5rem + 2vw);
+  margin-top: 10vh;
+  color: white;
+  font-weight: bold;
 }
 
+span {
+  color: #fff;
+  position: relative;
+  top: 0;
+  /* animation: colorful 6s infinite; */
+}
+
+@keyframes colorful {
+  100% {
+      filter: hue-rotate(360deg);
+  }
+}
 
 .search-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
-    width: 90%;
-    max-width: 600px;
-    position: relative; 
-  }
-  
-  .search-box input {
-    padding: 10px;
-    border-radius: 30px;
-    border: none;
-    width: 100%;
-    max-width: 600px;
-    margin-right: 0;
-    box-sizing: border-box;
-  }
-  
-  .search-box .search-btn {
-    background: purple;
-    color: white;
-    padding: 5px 20px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translateY(-50%); 
-    z-index: 1; 
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 90%;
+  max-width: 600px;
+  position: relative; 
+}
+
+.search-box input {
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  width: 100%;
+  max-width: 600px;
+  margin-right: 0;
+  box-sizing: border-box;
+}
+
+.search-box .search-btn {
+  background: purple;
+  color: white;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%); 
+  z-index: 1; 
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .powered-by-ai {
-    color: rgba(255, 255, 255, 0.535);
-    margin-top: 10px;
-    font-size: calc(0.8rem + 0.5vw);
+  color: rgba(255, 255, 255, 0.535);
+  margin-top: 10px;
+  /* font-size: calc(0.8rem + 0.5vw); */
+  font-weight: 700;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.flexx{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  font-size: 13px;
+}
+.flexx img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  -webkit-user-select: none;
+  margin: 0;
+  transition: background-color 300ms;
+  opacity: 0.7;
 }
 
 
+
+.glass-button {
+  display: inline-block;
+  background: rgb(255 255 255 / 11%);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  padding: 10px 20px;
+  text-align: center;
+  transition: background 0.3s ease;
+  position: absolute;
+  bottom: 40px;
+}
+
+.glass-button .button-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass-button .icon {
+  margin-left: 8px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff; 
+}
+
+
+
+
+/* Gradient background animation */
 @keyframes waveAnimation {
-    0% {
-        background-position: 0% 0%;
-    }
-    100% {
-        background-position: 100% 100%;
-    }
+  0% {
+      background-position: 0% 0%;
+  }
+  50% {
+      background-position: 100% 100%;
+  }
+  100% {
+      background-position: 0% 0%;
+  }
 }
 
-
-
-  @media screen and (max-width: 768px) {
-    .search-box {
-      flex-direction: column; 
-      align-items: stretch; 
-    }
-  
-    .search-box input {
-      margin-bottom: 10px; 
-      width: 100%; 
-    }
-  
-    .search-box .search-btn {      
-      width: auto; 
-      height: auto; 
-      margin-top: 0px;
-      right: 0px; 
-      top: 40%;
-    }
-  }
-  
